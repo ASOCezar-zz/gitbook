@@ -1,7 +1,7 @@
 import * as Styled from './styles';
 import React, { useRef } from 'react';
 import { useHistory } from 'react-router';
-import { Button, InputUsername, LoginForm, Title } from '../../Components';
+import { Button, InputUsername, LoginForm, Title } from '../../components';
 import { loadApi } from '../../services/load-api';
 
 const Login = (): JSX.Element => {
@@ -11,8 +11,13 @@ const Login = (): JSX.Element => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (usernameInput.current) {
+      usernameInput.current.classList.remove('error');
       const result = await loadApi(usernameInput.current.value);
-      result?.login && history.push('/');
+      result?.login &&
+        window.localStorage.setItem('gitbook-user', result.login);
+      result?.login
+        ? history.push('/')
+        : usernameInput.current.classList.add('error');
     }
   };
 

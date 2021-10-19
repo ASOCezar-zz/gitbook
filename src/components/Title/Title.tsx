@@ -5,6 +5,6 @@ type TitleProps = {
   children: string;
 };
 
-export const Title = ({ children }: TitleProps) => (
+export const Title = ({ children }: TitleProps): JSX.Element => (
   <Styled.Wrapper>{children}</Styled.Wrapper>
 );

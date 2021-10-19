@@ -16,7 +16,7 @@ export interface IUser {
   events_url: string;
   received_events_url: string;
   type: string;
-  site_admin: false;
+  site_admin: boolean;
   name: string;
   company: string | null;
   blog: string;
@@ -29,6 +29,6 @@ export interface IUser {
   public_gists: number;
   followers: number;
   following: number;
-  created_at: Date;
-  updated_at: Date;
+  created_at: string;
+  updated_at: string;
 }

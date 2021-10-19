@@ -6,6 +6,6 @@ type ButtonProps = {
   children: string;
 };
 
-export const Button = ({ children }: ButtonProps) => (
+export const Button = ({ children }: ButtonProps): JSX.Element => (
   <Styled.Btn type="submit">{children}</Styled.Btn>
 );

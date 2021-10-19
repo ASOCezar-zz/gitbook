@@ -6,7 +6,10 @@ type LoginFormProps = {
   children: JSX.Element[];
 };
 
-export const LoginForm = ({ handleSubmit, children }: LoginFormProps) => (
+export const LoginForm = ({
+  handleSubmit,
+  children,
+}: LoginFormProps): JSX.Element => (
   <Styled.Form onSubmit={(e) => handleSubmit(e)}>
     <Styled.Title> Entrar no Gitbook </Styled.Title>
     {children}
