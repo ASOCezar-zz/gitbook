@@ -70,9 +70,6 @@ export const Header = ({ user }: HeaderProps): JSX.Element => {
       <ConfigsWrapper>
         <Profile image={user.avatar_url} name={user.name.split(' ')[0]} />
         <Option>
-          <img src={menuIcon} width="20px" height="20px" />
-        </Option>
-        <Option>
           <MessengerImg />
         </Option>
         <Option>

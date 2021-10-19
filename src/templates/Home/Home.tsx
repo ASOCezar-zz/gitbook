@@ -8,7 +8,7 @@ import * as Styled from './styles';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../context/UserProvider/context';
 import { loadApi } from '../../services/load-api';
-import { Header } from '../../components';
+import { Header, Main } from '../../components';
 
 const Home: FunctionComponent = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -34,18 +34,12 @@ const Home: FunctionComponent = () => {
     setIsLoading(false);
   };
 
+  const renderMain = () => (isLoading ? <div></div> : <Main />);
+
   return (
     <Styled.Container>
       <Header user={user} />
-      {isLoading ? (
-        <div></div>
-      ) : (
-        <main>
-          <nav></nav>
-          <section></section>
-          <aside></aside>
-        </main>
-      )}
+      {renderMain()}
     </Styled.Container>
   );
 };
