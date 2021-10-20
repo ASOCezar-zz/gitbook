@@ -12,6 +12,8 @@ import { Header, Main } from '../../components';
 
 const Home: FunctionComponent = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const [searchValue, setSearchValue] = useState('');
   const userContext = useContext(UserContext);
   const { user, setUser } = userContext;
   const history = useHistory();
@@ -34,11 +36,20 @@ const Home: FunctionComponent = () => {
     setIsLoading(false);
   };
 
-  const renderMain = () => (isLoading ? <div></div> : <Main />);
+  const renderMain = () =>
+    isLoading ? (
+      <div></div>
+    ) : (
+      <Main isSearching={isSearching} searchValue={searchValue} />
+    );
 
   return (
     <Styled.Container>
-      <Header user={user} />
+      <Header
+        user={user}
+        setIsSearching={setIsSearching}
+        setSearchValue={setSearchValue}
+      />
       {renderMain()}
     </Styled.Container>
   );

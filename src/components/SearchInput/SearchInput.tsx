@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useRef } from 'react';
+import React, { ChangeEvent, Dispatch, SetStateAction, useRef } from 'react';
 import * as Styled from './styles';
 
 import searchImg from '../../assets/search.svg';
@@ -6,9 +6,14 @@ import searchImg from '../../assets/search.svg';
 type SearchInputProps = {
   focus: boolean;
   setFocus: Dispatch<SetStateAction<boolean>>;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const SearchInput = ({ focus, setFocus }: SearchInputProps) => {
+export const SearchInput = ({
+  focus,
+  setFocus,
+  onChange,
+}: SearchInputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -30,6 +35,7 @@ export const SearchInput = ({ focus, setFocus }: SearchInputProps) => {
         focus={focus}
         type="text"
         placeholder="Pesquisar no Gitbook"
+        onChange={(e) => onChange(e)}
       />
     </Styled.Wrapper>
   );

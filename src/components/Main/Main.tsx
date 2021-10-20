@@ -6,7 +6,12 @@ import { IRepository } from '../../types/Repository';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import * as Styled from './styles';
 
-export const Main = () => {
+type MainProps = {
+  isSearching: boolean;
+  searchValue: string;
+};
+
+export const Main = ({ isSearching, searchValue }: MainProps) => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
 
@@ -15,19 +20,31 @@ export const Main = () => {
   const mediaSmall = useMediaQuery('(min-width: 885px)');
 
   const [repos, setRepos] = useState<IRepository[]>();
+  const [filteredRepos, setFilteredRepos] = useState<IRepository[]>();
 
   useEffect(() => {
     fetchRepositories();
-  }, [user]);
+  }, [user, isSearching]);
 
   const fetchRepositories = async () => {
     const loadedRepositories = await loadRepositories(user.login);
     loadedRepositories && setRepos(loadedRepositories);
   };
 
+  useEffect(() => {
+    if (isSearching) {
+      const searchedRepos = repos?.filter((repo) =>
+        repo.name.toLowerCase().includes(searchValue.toLowerCase()),
+      );
+      setFilteredRepos(searchedRepos);
+    } else {
+      setFilteredRepos(repos);
+    }
+  }, [isSearching, searchValue, repos]);
+
   const renderRepositories = () => {
-    return repos ? (
-      <Repositories repos={repos} />
+    return filteredRepos ? (
+      <Repositories repos={filteredRepos} />
     ) : (
       <div> Você ainda não possui repositórios criados </div>
     );

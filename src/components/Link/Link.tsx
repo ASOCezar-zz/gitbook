@@ -2,7 +2,7 @@ import React from 'react';
 import * as Styled from './styles';
 
 type LinkProps = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   selected?: boolean;
 };
 
