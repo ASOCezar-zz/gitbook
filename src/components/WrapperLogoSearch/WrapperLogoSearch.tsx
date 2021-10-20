@@ -5,6 +5,8 @@ type WrapperLogoSearchProps = {
   children: JSX.Element[];
 };
 
-export const WrapperLogoSearch = ({ children }: WrapperLogoSearchProps) => (
+export const WrapperLogoSearch = ({
+  children,
+}: WrapperLogoSearchProps): JSX.Element => (
   <Styled.Wrapper>{children}</Styled.Wrapper>
 );

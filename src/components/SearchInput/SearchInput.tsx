@@ -13,7 +13,7 @@ export const SearchInput = ({
   focus,
   setFocus,
   onChange,
-}: SearchInputProps) => {
+}: SearchInputProps): JSX.Element => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (

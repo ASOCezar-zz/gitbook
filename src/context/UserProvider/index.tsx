@@ -8,7 +8,7 @@ type UserProviderProps = {
   children: React.ReactNode;
 };
 
-export const UserProvider = ({ children }: UserProviderProps) => {
+export const UserProvider = ({ children }: UserProviderProps): JSX.Element => {
   const [user, setUser] = useState<IUser>(userMock);
 
   return (

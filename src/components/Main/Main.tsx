@@ -11,7 +11,7 @@ type MainProps = {
   searchValue: string;
 };
 
-export const Main = ({ isSearching, searchValue }: MainProps) => {
+export const Main = ({ isSearching, searchValue }: MainProps): JSX.Element => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
 

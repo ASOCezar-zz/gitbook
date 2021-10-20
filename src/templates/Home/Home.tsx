@@ -11,6 +11,8 @@ import { loadApi } from '../../services/load-api';
 import { Header, Main } from '../../components';
 
 const Home: FunctionComponent = () => {
+  document.title = 'Gitbook | Home';
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [searchValue, setSearchValue] = useState('');

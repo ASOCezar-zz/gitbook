@@ -7,5 +7,5 @@ export const loadFollowings = async (
     .then((res) => {
       return res.status === 404 ? null : res.json();
     })
-    .catch((err) => console.error(err.message));
+    .catch((err) => err.message);
 };

@@ -8,7 +8,12 @@ type MenuItemProps = {
   onClick?: () => void;
 };
 
-export const MenuItem = ({ src, text, onClick, target }: MenuItemProps) => (
+export const MenuItem = ({
+  src,
+  text,
+  onClick,
+  target,
+}: MenuItemProps): JSX.Element => (
   <Styled.Link href={target} onClick={onClick} target="_blank">
     <Styled.Img src={src} />
     <Styled.Span>{text}</Styled.Span>

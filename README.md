@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Gitbook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## O Projeto
 
-## Available Scripts
+Esse projeto foi pensado e desenvolvido durante o curso de ReactJs da DIO, mas com implementações e ideias minhas de fazer uma réplica da página oficial do Facebook e trazer de maneira mais divertida os conteúdos da API oficial do Github.
+Esse projeto foi apenas para fins didáticos, não possuindo nenhuma intenção de uso além desse fim.
 
-In the project directory, you can run:
+## Ferramentas
 
-### `npm start`
+Para a confecção desse projeto, utilizei a linguagem de programação **Typescript** que torna o JavaScript uma linguagem mais segura através de novos elementos e da typagem dinâmica dos elementos.
+Utilizei também a lib **ReactJs** com **Styled-Components** que tornam a programação em forma de elementos muito mais performática, dadas as inúmeras possibilidades de passagem de propriedas e argumentos dentro dos componentes criados.
+ - Dentro do ReactJs utilizei tambem o hook **useContext** para fazer um provider com todas as informações do usuário, melhorando a performance e diminuindo as prop-drillings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screen Shots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Certificado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como compilar e rodar o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Primeiramente, é necessário fazer um clone dessa fork para a máquina. Para isso, se possuir o git instalado, é possível utilizar o terminal com o comando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```Bash
+git clone https://github.com/ASOCezar/gitbook.git
+```
 
-### `npm run eject`
+- Depois de baixado, na pasta master (geralmente a pasta raíz) do projeto deve ser feita a instalação dos pacotes utilizados no projeto, de acordo com seu gerenciador de pacotes, utilize:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```Bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Ao final da instalação dos pacotes, pode ser utilizado o comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```Bash
+npm start
+```

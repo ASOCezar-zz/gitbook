@@ -13,7 +13,7 @@ type MenuNavProps = {
   userImg: string;
 };
 
-export const MenuNav = ({ user, userImg }: MenuNavProps) => {
+export const MenuNav = ({ user, userImg }: MenuNavProps): JSX.Element => {
   const history = useHistory();
 
   const handleLogout = () => {

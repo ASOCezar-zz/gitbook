@@ -5,7 +5,7 @@ import { loadFollowings } from '../../services/load-followings';
 import { IUser } from '../../types/User';
 import * as Styled from './styles';
 
-export const Aside = () => {
+export const Aside = (): JSX.Element => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
 

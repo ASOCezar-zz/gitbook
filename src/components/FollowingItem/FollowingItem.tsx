@@ -6,7 +6,9 @@ type FollowingItemProps = {
   following: IUser;
 };
 
-export const FollowingItem = ({ following }: FollowingItemProps) => (
+export const FollowingItem = ({
+  following,
+}: FollowingItemProps): JSX.Element => (
   <Styled.Container href={following.html_url} target="_blank">
     <Styled.Img src={following.avatar_url} />
     <Styled.Span>{following.login}</Styled.Span>

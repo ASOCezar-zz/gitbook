@@ -8,7 +8,7 @@ type RepositoriesProps = {
   repos: IRepository[];
 };
 
-export const Repositories = ({ repos }: RepositoriesProps) => {
+export const Repositories = ({ repos }: RepositoriesProps): JSX.Element => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
 

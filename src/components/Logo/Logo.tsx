@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Logo = () => (
+export const Logo = (): JSX.Element => (
   <svg
     viewBox="0 0 36 36"
     className="a8c37x1j ms05siws hwsy1cff b7h9ocf4"

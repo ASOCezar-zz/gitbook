@@ -6,7 +6,9 @@ type CardRepositoryProps = {
   repository: IRepository;
 };
 
-export const CardRepository = ({ repository }: CardRepositoryProps) => (
+export const CardRepository = ({
+  repository,
+}: CardRepositoryProps): JSX.Element => (
   <Styled.Card>
     <a href={`https://github.com/${repository.full_name}`}>
       <Styled.Title>{repository.name}</Styled.Title>

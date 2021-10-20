@@ -5,6 +5,8 @@ import { Button, InputUsername, LoginForm, Title } from '../../components';
 import { loadApi } from '../../services/load-api';
 
 const Login = (): JSX.Element => {
+  document.title = 'Gitbook | Login';
+
   const usernameInput = useRef<HTMLInputElement>(null);
   const history = useHistory();
 
